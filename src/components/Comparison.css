@@ -1,0 +1,190 @@
+.comparison-section {
+    background: linear-gradient(180deg, var(--bg-color) 0%, #111 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comparison-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media(min-width: 900px) {
+    .comparison-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.comp-sidebar {
+    flex: 1;
+}
+
+.comp-sidebar h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.text-accent {
+    color: var(--accent-primary);
+}
+
+.comp-sidebar p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.comp-visuals {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+}
+
+@media(min-width: 600px) {
+    .comp-visuals {
+        flex-direction: row;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 2rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.comp-box {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.comp-box.good {
+    background: rgba(224, 255, 63, 0.05);
+    border-color: rgba(224, 255, 63, 0.2);
+}
+
+.comp-box h4 {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.status-text.highlight {
+    color: var(--accent-primary);
+}
+
+.chaos-visual,
+.order-visual {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chaos Lines */
+.noise-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.chaos-path {
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+    animation: jitter 0.2s infinite;
+}
+
+.p1 {
+    animation-delay: 0s;
+}
+
+.p2 {
+    animation-delay: 0.05s;
+}
+
+.p3 {
+    animation-delay: 0.1s;
+}
+
+@keyframes jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(1px, 1px);
+    }
+
+    50% {
+        transform: translate(-1px, -1px);
+    }
+
+    75% {
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Order Grid */
+.order-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grid-row {
+    display: flex;
+    gap: 8px;
+}
+
+.grid-cell {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.grid-cell.filled {
+    background: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(224, 255, 63, 0.3);
+}
+
+/* VS Badge */
+.vs-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.vs-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(255, 90, 95, 0.4);
+}

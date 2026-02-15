@@ -1,0 +1,122 @@
+.services-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.services-header h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.stroke-text {
+    -webkit-text-stroke: 1px var(--accent-secondary);
+    color: transparent;
+}
+
+.services-header p {
+    color: var(--text-secondary);
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media(min-width: 768px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.card-content {
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.i-rocket {
+    color: var(--accent-secondary);
+}
+
+.i-bank {
+    color: var(--accent-tertiary);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.card-bg-glow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.glow-blue {
+    background: var(--accent-secondary);
+    top: -50px;
+    right: -50px;
+}
+
+.glow-purple {
+    background: var(--accent-tertiary);
+    bottom: -50px;
+    left: -50px;
+    top: auto;
+    right: auto;
+}
